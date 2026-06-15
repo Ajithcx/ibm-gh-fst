@@ -11,8 +11,8 @@ public class ActivityHuman {
 		
 		Robot r1 = new Robot(), r2 = new Robot(), r3 = new Robot();
 		
-		System.out.println("Population of Humans is " + Human.population);
-		System.out.println("Population of Robots is " + Robot.count);
+		System.out.println("Population of Humans = " + Human.count);
+		System.out.println("Population of Robots = " + Robot.rcount);
 
 	}
 
@@ -20,7 +20,7 @@ public class ActivityHuman {
 
 abstract class Human {
 	
-	static int population = 0;
+	static int count = 0;
 	
 	abstract void walking();
 	
@@ -30,7 +30,7 @@ abstract class Human {
 class Boy extends Human{
 	
 	Boy() {
-		population++;
+		count++;
 	}
 	
 	public void walking() {
@@ -45,7 +45,7 @@ class Boy extends Human{
 class Girl extends Human{
 	
 	Girl() {
-		population++;
+		count++;
 	}
 	
 	public void walking() {
@@ -59,10 +59,10 @@ class Girl extends Human{
 
 class Robot {
 	
-	static int count = 0;
+	static int rcount = 0;
 	
 	Robot() {
-		count++;
+		rcount++;
 	}
 	
 	public void walking() {
